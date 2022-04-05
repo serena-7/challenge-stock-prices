@@ -1,5 +1,5 @@
 function best(arr){
-    differences = [];
+    let differences = [];
     for(let i = 1; i < arr.length; i++){
         for(let j = 0; j < i; j++){
             differences.push(arr[i]-arr[j]);
