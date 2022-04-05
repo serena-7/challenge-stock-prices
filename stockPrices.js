@@ -1,12 +1,18 @@
 function best(arr){
-    let differences = [];
+    let difference = 0;
+    let big = 0;
+    let small = 0;
     for(let i = 1; i < arr.length; i++){
         for(let j = 0; j < i; j++){
-            differences.push(arr[i]-arr[j]);
+            if(arr[i]-arr[j] > difference){
+                difference = arr[i] - arr[j];
+                big = arr[i];
+                small = arr[j];
+            }
         }
     }
     // console.log(differences)
-    return Math.max.apply(null, differences);
+    console.log(`${difference} - buy at $${small}, sell at $${big}`);
 }
 
-console.log(best([15, 10, 20, 22, 1, 9]));
+best([15, 10, 20, 22, 1, 9]);
