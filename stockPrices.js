@@ -5,7 +5,7 @@ function best(arr){
             differences.push(arr[i]-arr[j]);
         }
     }
-    console.log(differences)
+    // console.log(differences)
     return Math.max.apply(null, differences);
 }
 
